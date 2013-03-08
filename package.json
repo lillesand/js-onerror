@@ -1,0 +1,8 @@
+{
+    "name": "js-onerror"
+  , "description": "an optimal window.onerror"
+  , "version": "0.0.1"
+  , "dependencies": {
+    "connect": "2.7.x"
+  }
+}
