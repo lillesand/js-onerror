@@ -9,6 +9,9 @@ faktisk inntreffer.
 
 window.onerror blir invokert for alle uncaught exceptions fra JavaScript i nettleseren. This is where we shine!
 
+**Du** er sterkt oppfordret til å spørre og diskutere på pull requests selv om du ikke bidrar med kode selv. Ingen spørsmål
+er dumme og _visdommen ligger ofte i diskusjonene_!
+
 Beskrivelse
 -----------
 

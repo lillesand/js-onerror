@@ -2,11 +2,9 @@
 <html>
   <script type="text/javascript">
     window.onerror = function(errorMsg, url, lineNumber) {
-      var logUrl = '/log?msg=' + errorMsg
+      var logUrl = '/log?msg=' + encodeURIComponent(errorMsg);
 
-      var elem = document.createElement("img");
-      elem.setAttribute("src", logUrl);
-      document.body.appendChild(elem);
+      new Image().src = logUrl;
     };
   </script>
 </html>
