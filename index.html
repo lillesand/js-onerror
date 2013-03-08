@@ -1,10 +1,5 @@
 <!DOCTYPE HTML>
 <html>
-  <script type="text/javascript">
-    window.onerror = function(errorMsg, url, lineNumber) {
-      var logUrl = 'http://example.org/endpoint?msg=' + encodeURIComponent(errorMsg);
-
-      new Image().src = logUrl;
-    }
-  </script>
+  <script src="onerror.js"></script>
+  <!-- <script src="error.js"></script> -->
 </html>
