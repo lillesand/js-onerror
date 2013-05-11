@@ -1,0 +1,15 @@
+{
+  "name": "js-onerror",
+  "version": "0.0.0",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "shelljs": "~0.1.4",
+    "underscore": "~1.4.4",
+    "connect": "~2.7.9",
+    "node-browsermob-proxy": "git://github.com/kjbekkelund/node-browsermob-proxy.git#master"
+  },
+  "scripts": {
+    "test": "node make.js test"
+  }
+}
