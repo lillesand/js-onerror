@@ -11,3 +11,7 @@ target.proxy = function() {
 target.selenium = function() {
     exec('java -jar test/functional/lib/selenium-server-standalone-2.32.0.jar -Dwebdriver.chrome.driver=test/functional/lib/chromedriver');
 };
+
+target.server = function() {
+    exec('node server/server.js');
+};
