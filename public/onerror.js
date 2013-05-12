@@ -1,15 +1,19 @@
 (function() {
 
-    var maxNumberOfErrors = 5;
-    var errorCount = 0;
+    var callMaxNumberOfTimes = function(maxNumberOfInvocations, func) {
+        var errorCount = 0;
 
-    var oldOnError = window.onError;
+        return function() {
+            if (errorCount++ > maxNumberOfInvocations) return;
 
-    window.onerror = function(errorMsg, file, lineNumber) {
-        // prevent infinite loops
-        errorCount += 1;
-        if (errorCount > maxNumberOfErrors) return;
+            func.apply(this, arguments);
+        }
+    };
 
+
+    var oldOnError = window.onerror;
+
+    var handleOnError = function(errorMsg, file, lineNumber) {
         try {
             var url = window.location.href;
             var logUrl = '/log?msg=' + encodeURIComponent(errorMsg) + '&url=' + encodeURIComponent(url);
@@ -23,5 +27,7 @@
             oldOnError.apply(this, arguments);
         }
     };
+
+    window.onerror = callMaxNumberOfTimes(5, handleOnError);
 
 })();
