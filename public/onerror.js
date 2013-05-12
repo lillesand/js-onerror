@@ -1,6 +1,6 @@
 (function() {
 
-    var oldOnError = window.onError;
+    var oldOnError = window.onerror;
 
     window.onerror = function(errorMsg, file, lineNumber) {
         try {
